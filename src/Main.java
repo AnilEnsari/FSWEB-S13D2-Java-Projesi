@@ -15,23 +15,7 @@ public class Main {
         System.out.println("numberToWords3: "+numberToWords(-12));
 
     }
-   /*
 
-   numberToWords(123); => "One Two Three" dönmeli.
-
-numberToWords(1010); => "One Zero One Zero" dönmeli.
-
-numberToWords(-12);
-
-
-
-   isPerfectNumber(6); => true dönmeli (1+2+3=6)
-
-    isPerfectNumber(28); => true dönmeli (1+2+4+7+14=28)
-
-    isPerfectNumber(5); => false dönmeli (kendisi dışındaki tek böleni 1)
-
-    isPerfectNumber(-1);*/
     public static boolean isPalindrome(int number) {
         String numString = String.valueOf(Math.abs(number)) ;
         for ( int i = 0 ; i<numString.length();i++){
@@ -60,7 +44,7 @@ int numCounter = 0 ;
     public static String numberToWords(int number){
        if(number<0){return "Invalid Value";}
        String numberString = String.valueOf(number);
-      return  numberString.replaceAll("1","one ").replaceAll("2","two ").replaceAll("0","zero ").replaceAll("3","three ");
+      return  numberString.replaceAll("1","one ").replaceAll("2","two ").replaceAll("0","zero ").replaceAll("3","three ").trim();
 
 
     }
